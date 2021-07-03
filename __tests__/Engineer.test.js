@@ -6,7 +6,7 @@
 // we need to test that getID has the property of ID
 // we need to test that getRole has the property of role
 
-const Engineer = require('../lib/engineer')
+const Engineer = require('../lib/Engineer')
 
 test('creates an engineer object', () => {
     const engineer = new Engineer('Dave', 1, 'dave@gmail.com', 'davejg');
