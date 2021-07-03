@@ -14,7 +14,7 @@ test('creates an employee object', () => {
     expect(employee.name).toBe('Dave');
     expect(employee.id).toBe(1);
     expect(employee.email).toBe('dave@gmail.com');
-    expect(employee.role).toBe('employee');
+    expect(employee.role).toBe('Employee');
 })
 
 test('gets employees name as an object', () => {

@@ -15,7 +15,7 @@ test('creates an manager object', () => {
     expect(manager.name).toBe('Dave');
     expect(manager.id).toBe(1);
     expect(manager.email).toBe('dave@gmail.com');
-    expect(manager.role).toBe('manager');
+    expect(manager.role).toBe('Manager');
     expect(manager.officeNumber).toBe(6);
 })
 
@@ -41,4 +41,10 @@ test('gets managers role as an object', () => {
     const manager = new Manager('Dave', 1, 'dave@gmail.com');
 
     expect(manager.getRole()).toHaveProperty('role');
+})
+
+test('gets managers office number as an object', () => {
+    const manager = new Manager('Dave', 1, 'dave@gmail.com', 6);
+
+    expect(manager.getOfficeNumber()).toHaveProperty('officeNumber');
 })
