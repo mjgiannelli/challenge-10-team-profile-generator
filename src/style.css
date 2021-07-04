@@ -1,0 +1,10 @@
+/* add default's to weppage */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+/* make body full page size depending on viewport */
+body { min-height: 100vh; }
