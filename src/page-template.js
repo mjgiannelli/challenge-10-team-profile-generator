@@ -17,6 +17,8 @@
 //     `;
 // }
 
+
+// function to create html template
 module.exports = templateData => {
     return `
   <!DOCTYPE html>
