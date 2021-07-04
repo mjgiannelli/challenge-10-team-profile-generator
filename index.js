@@ -4,8 +4,8 @@
 const Organization = require('./lib/Organization');
 
 // call to start the app
-new Organization().initializeOrganization();
-
+new Organization().initializeOrganization()
+    
 
 
 
