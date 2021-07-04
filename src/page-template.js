@@ -37,7 +37,9 @@ module.exports = templateData => {
       <h1>My Team<h1>
     </header>
     <main class="container">
-        <h2>${templateData}</h2>
+      <div class='row'>
+        
+      </div>
     </main>
   </body>
   </html>
