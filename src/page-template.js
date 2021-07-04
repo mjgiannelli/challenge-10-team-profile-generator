@@ -13,7 +13,7 @@ const generateEmployeeCards = employeesArray => {
     <section class='row-cards'>
       <div class='col'>
         ${employeesArray
-      .filter(({ role }) => role = 'Manager')
+      .filter(({ role }) => role === 'Manager')
       .map(({ name, role, id, email, officeNumber }) => {
         return `
           <div class='card-container'>
@@ -40,6 +40,64 @@ const generateEmployeeCards = employeesArray => {
         `;
       })
       .join('')}
+
+      ${employeesArray
+        .filter(({ role }) => role === 'Engineer')
+        .map(({ name, role, id, email, github }) => {
+          return `
+            <div class='card-container'>
+              <div class='card-title-row'>
+                <div class='card-col-title'>
+                  <h2>${name}</h2>
+                </div>
+                <div class='card-col-title'>
+                  <h3>${role}</h3>
+                </div>
+              </div>
+              <div class='card-body-row'>
+                <div class='card-col-body'>
+                  <h4>ID: ${id}</h4>
+                </div>
+                <div class='card-col-body'>
+                  <a href='mailto:${email}'>Email: ${email}</a>
+                </div>
+                <div class='card-col-body'>
+                <a href='https://github.com/${github}'>GitHub: ${github}</a>
+                </div>
+              </div>
+            </div>
+          `;
+        })
+        .join('')}
+
+        ${employeesArray
+          .filter(({ role }) => role === 'Intern')
+          .map(({ name, role, id, email, school }) => {
+            return `
+              <div class='card-container'>
+                <div class='card-title-row'>
+                  <div class='card-col-title'>
+                    <h2>${name}</h2>
+                  </div>
+                  <div class='card-col-title'>
+                    <h3>${role}</h3>
+                  </div>
+                </div>
+                <div class='card-body-row'>
+                  <div class='card-col-body'>
+                    <h4>ID: ${id}</h4>
+                  </div>
+                  <div class='card-col-body'>
+                    <a href='mailto:${email}'>Email: ${email}</a>
+                  </div>
+                  <div class='card-col-body'>
+                    <h4>School: ${school}</h4>
+                  </div>
+                </div>
+              </div>
+            `;
+          })
+          .join('')}
       </div>
     </section>
   `;
