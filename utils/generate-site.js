@@ -2,8 +2,8 @@ const fs = require('fs');
 
 
 //takes in the user input and writes the html files
-const writeFile = fileContent => {
-    return new Promise((resolve, reject) => {
+const writeFile = async fileContent => {
+    return await new Promise((resolve, reject) => {
         fs.writeFile('./dist/index.html', fileContent, err => {
             if (err) {
                 reject(err);
@@ -19,9 +19,9 @@ const writeFile = fileContent => {
 };
 
 // copies the css file to dist
-const copyFile = () => {
-    return new Promise((resolve, reject) => {
-        fs.copyFile('./src/style.css', './dist/style.css', err => {
+const copyFile = async () => {
+    return new Promise(async (resolve, reject) => {
+         fs.copyFile('./src/style.css', './dist/style.css', err => {
             if (err) {
                 reject(err);
                 return;
