@@ -8,19 +8,47 @@
 // first row two columns (Name and icon)
 // second row 3 columns (list)
 
-// const generateEmployees = employeesArray => {
-//     return `
-//     <section class='row-cards'>
-//         <div class='col'>
-//         ${employeesArray
-//         .map(({ name}))}    
-//     `;
-// }
+const generateEmployeeCards = employeesArray => {
+  return `
+    <section class='row-cards'>
+      <div class='col'>
+        ${employeesArray
+      .filter(({ role }) => role = 'Manager')
+      .map(({ name, role, id, email, officeNumber }) => {
+        return `
+          <div class='card-container'>
+            <div class='card-title-row'>
+              <div class='card-col-title'>
+                <h2>${name}</h2>
+              </div>
+              <div class='card-col-title'>
+                <h3>${role}</h3>
+              </div>
+            </div>
+            <div class='card-body-row'>
+              <div class='card-col-body'>
+                <h4>ID: ${id}</h4>
+              </div>
+              <div class='card-col-body'>
+                <a href='mailto:${email}'>Email: ${email}</a>
+              </div>
+              <div class='card-col-body'>
+                <h4>Office Number: ${officeNumber}</h4>
+              </div>
+            </div>
+          </div>
+        `;
+      })
+      .join('')}
+      </div>
+    </section>
+  `;
+}
 
 
 // function to create html template
 module.exports = templateData => {
-    return `
+  return `
   <!DOCTYPE html>
   <html lang="en">
 
@@ -28,9 +56,10 @@ module.exports = templateData => {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Organziation</title>
+    <title>Portfolio Demo</title>
     <link rel="stylesheet" href="style.css">
   </head>
+
 
   <body>
     <header>
@@ -38,7 +67,7 @@ module.exports = templateData => {
     </header>
     <main class="container">
       <div class='row'>
-        
+      ${generateEmployeeCards(templateData)}
       </div>
     </main>
   </body>
