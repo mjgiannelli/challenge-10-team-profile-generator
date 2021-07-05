@@ -12,16 +12,66 @@ body { min-height: 100vh; }
 /* // Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 576px) {
     header {
-        background-color: red;
+        background-color: #ff4d4d;
         width: 100%;
         font-size: 8rem;
-        padding: 5rem;
+        padding: 3rem;
         text-align: center;
     }
 
     header h1 {
         color: white;
     }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        min-height: 100vh;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .col {
+        width: 100%;
+        text-align: center;
+        margin: 1.5rem 0;
+    }
+
+    .card-container {
+        box-shadow: 0.5rem 0.5rem 1rem #666666;
+    }
+
+    .card-title-row {
+        background-color: #3385ff;
+        text-align: left;
+        color: white;
+        padding: 1rem;
+    }
+    .card-col-title {
+        font-size: 4rem;
+    }
+
+    .card-body-row {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #e6e6e6;
+        padding: 1rem 0;
+    }
+
+    .card-col-body {
+        font-size: 3rem;
+        background-color: white;
+        width: 80%;
+        margin: 0 auto;
+        border: .1rem solid #bfbfbf;
+        text-align: left;
+        padding: 1rem;
+    }
+
+    
 }
 
 /* // Small devices (landscape phones, 576px and up) */
