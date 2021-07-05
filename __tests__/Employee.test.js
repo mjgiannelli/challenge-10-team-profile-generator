@@ -1,4 +1,3 @@
-// we will create a mock employee
 // we need to test name tobe the name we pass through
 // we need to test that the ID is equal to any number
 // we need to test that getName has the property of name
