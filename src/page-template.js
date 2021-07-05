@@ -8,6 +8,8 @@
 // first row two columns (Name and icon)
 // second row 3 columns (list)
 
+
+//function to take the employee object array and create an HTML template with it
 const generateEmployeeCards = employeesArray => {
   return `
     <section class='row'>
@@ -109,7 +111,7 @@ const generateEmployeeCards = employeesArray => {
 }
 
 
-// function to create html template
+// function to create html template and combining the template generated from above
 module.exports = templateData => {
   return `
   <!DOCTYPE html>
