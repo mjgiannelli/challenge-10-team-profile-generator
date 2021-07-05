@@ -1,0 +1,161 @@
+/* add default's to weppage */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+/* make body full page size depending on viewport */
+body { min-height: 100vh; }
+
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (min-width: 0px) {
+    header {
+        background-color: #ff4d4d;
+        width: 100%;
+        font-size: 8rem;
+        padding: 3rem;
+        text-align: center;
+    }
+
+    header h1 {
+        color: white;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        min-height: 100vh;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .col {
+        width: 100%;
+        text-align: center;
+        margin: 1.5rem 0;
+    }
+
+    .card-container {
+          box-shadow: 0.5rem 0.5rem 1rem #666666;
+    }
+
+    .card-title-row {
+        background-color: #3385ff;
+        text-align: left;
+        color: white;
+        padding: 1rem;
+    }
+
+    h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    .card-col-title {
+        font-size: 5rem;
+    }
+
+    .card-body-row {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #e6e6e6;
+        padding: 5rem 0;
+    }
+
+    .card-col-body {
+        font-size: 3rem;
+        background-color: white;
+        width: 90%;
+        margin: 0 auto;
+        border: .1rem solid #bfbfbf;
+        text-align: left;
+        padding: 1rem;
+    }
+
+    .link {
+        height: 4.4rem;
+    }
+
+    a {
+        text-decoration: none;
+        display: inherit;
+    }
+
+    .fa-mug-hot:before {
+        content: "\f7b6";
+        font-size: 3rem;
+    }
+    
+    .fa-glasses:before {
+        content: "\f530";
+        font-size: 3rem;
+    }
+
+    .fa-user-graduate:before {
+        content: "\f501";
+        font-size: 3rem;
+    }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .row {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    header {
+        margin-bottom: 5rem;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .row {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+
+    .col {
+        width: 45%;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .col {
+        width: 40%;
+    }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+    .container {
+        width: 100%;
+    }
+
+    .col {
+        width: 30%;
+    }
+
+    .row {
+        justify-content: center;
+    }
+
+    .card-container {
+        margin: 0 1rem;
+  }
+
+}

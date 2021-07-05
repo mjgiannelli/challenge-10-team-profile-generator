@@ -10,26 +10,27 @@
 
 const generateEmployeeCards = employeesArray => {
   return `
-    <section class='row-cards'>
-      <div class='col'>
+    <section class='row'>
+      
         ${employeesArray
       .filter(({ role }) => role === 'Manager')
       .map(({ name, role, id, email, officeNumber }) => {
         return `
+        <div class='col'>
           <div class='card-container'>
             <div class='card-title-row'>
               <div class='card-col-title'>
                 <h2>${name}</h2>
               </div>
               <div class='card-col-title'>
-                <h3>${role}</h3>
+                <h3><i class="fas fa-mug-hot"></i> ${role}</h3>
               </div>
             </div>
             <div class='card-body-row'>
               <div class='card-col-body'>
                 <h4>ID: ${id}</h4>
               </div>
-              <div class='card-col-body'>
+              <div class='card-col-body link'>
                 <a href='mailto:${email}'>Email: ${email}</a>
               </div>
               <div class='card-col-body'>
@@ -37,57 +38,61 @@ const generateEmployeeCards = employeesArray => {
               </div>
             </div>
           </div>
+        </div>       
         `;
       })
       .join('')}
 
       ${employeesArray
-        .filter(({ role }) => role === 'Engineer')
-        .map(({ name, role, id, email, github }) => {
-          return `
+      .filter(({ role }) => role === 'Engineer')
+      .map(({ name, role, id, email, github }) => {
+        return `
+          <div class='col'>
             <div class='card-container'>
               <div class='card-title-row'>
                 <div class='card-col-title'>
                   <h2>${name}</h2>
                 </div>
                 <div class='card-col-title'>
-                  <h3>${role}</h3>
+                  <h3><i class="fas fa-glasses"></i> ${role}</h3>
                 </div>
               </div>
               <div class='card-body-row'>
                 <div class='card-col-body'>
                   <h4>ID: ${id}</h4>
                 </div>
-                <div class='card-col-body'>
+                <div class='card-col-body link'>
                   <a href='mailto:${email}'>Email: ${email}</a>
                 </div>
-                <div class='card-col-body'>
+                <div class='card-col-body link'>
                 <a href='https://github.com/${github}'>GitHub: ${github}</a>
                 </div>
               </div>
             </div>
-          `;
-        })
-        .join('')}
+          </div>
+        `;
+      })
+      .join('')}
 
         ${employeesArray
-          .filter(({ role }) => role === 'Intern')
-          .map(({ name, role, id, email, school }) => {
-            return `
+      .filter(({ role }) => role === 'Intern')
+      .map(({ name, role, id, email, school }) => {
+        return `
+          <div class='col'>
               <div class='card-container'>
                 <div class='card-title-row'>
                   <div class='card-col-title'>
                     <h2>${name}</h2>
                   </div>
                   <div class='card-col-title'>
-                    <h3>${role}</h3>
+                    <h3><i class="fas fa-user-graduate"></i> ${role}</h3>
                   </div>
                 </div>
                 <div class='card-body-row'>
                   <div class='card-col-body'>
                     <h4>ID: ${id}</h4>
                   </div>
-                  <div class='card-col-body'>
+                  <div class='card-col-body link'>
                     <a href='mailto:${email}'>Email: ${email}</a>
                   </div>
                   <div class='card-col-body'>
@@ -95,10 +100,10 @@ const generateEmployeeCards = employeesArray => {
                   </div>
                 </div>
               </div>
-            `;
-          })
-          .join('')}
-      </div>
+            </div>
+          `;
+      })
+      .join('')}
     </section>
   `;
 }
@@ -114,7 +119,9 @@ module.exports = templateData => {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfolio Demo</title>
+    <title>Organization Chart</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
   </head>
 
@@ -124,9 +131,7 @@ module.exports = templateData => {
       <h1>My Team<h1>
     </header>
     <main class="container">
-      <div class='row'>
       ${generateEmployeeCards(templateData)}
-      </div>
     </main>
   </body>
   </html>
