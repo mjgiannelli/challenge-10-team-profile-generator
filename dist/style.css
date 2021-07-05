@@ -10,7 +10,7 @@
 body { min-height: 100vh; }
 
 /* // Extra small devices (portrait phones, less than 576px) */
-@media (min-width: 275px) {
+@media (min-width: 0px) {
     header {
         background-color: #ff4d4d;
         width: 100%;
@@ -50,28 +50,55 @@ body { min-height: 100vh; }
         color: white;
         padding: 1rem;
     }
+
+    h2 {
+        margin-bottom: 1.5rem;
+    }
+
     .card-col-title {
-        font-size: 4rem;
+        font-size: 5rem;
     }
 
     .card-body-row {
         display: flex;
         flex-wrap: wrap;
         background-color: #e6e6e6;
-        padding: 1rem 0;
+        padding: 5rem 0;
     }
 
     .card-col-body {
         font-size: 3rem;
         background-color: white;
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
         border: .1rem solid #bfbfbf;
         text-align: left;
         padding: 1rem;
     }
 
+    .link {
+        height: 4.4rem;
+    }
+
+    a {
+        text-decoration: none;
+        display: inherit;
+    }
+
+    .fa-mug-hot:before {
+        content: "\f7b6";
+        font-size: 3rem;
+    }
     
+    .fa-glasses:before {
+        content: "\f530";
+        font-size: 3rem;
+    }
+
+    .fa-user-graduate:before {
+        content: "\f501";
+        font-size: 3rem;
+    }
 }
 
 /* // Small devices (landscape phones, 576px and up) */
@@ -130,4 +157,5 @@ body { min-height: 100vh; }
     .card-container {
         margin: 0 1rem;
   }
+
 }
