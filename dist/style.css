@@ -41,7 +41,7 @@ body { min-height: 100vh; }
     }
 
     .card-container {
-        box-shadow: 0.5rem 0.5rem 1rem #666666;
+          box-shadow: 0.5rem 0.5rem 1rem #666666;
     }
 
     .card-title-row {

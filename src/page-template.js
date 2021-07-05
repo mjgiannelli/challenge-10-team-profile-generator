@@ -10,12 +10,13 @@
 
 const generateEmployeeCards = employeesArray => {
   return `
-    <section class='row-cards'>
-      <div class='col'>
+    <section class='row'>
+      
         ${employeesArray
       .filter(({ role }) => role === 'Manager')
       .map(({ name, role, id, email, officeNumber }) => {
         return `
+        <div class='col'>
           <div class='card-container'>
             <div class='card-title-row'>
               <div class='card-col-title'>
@@ -37,14 +38,16 @@ const generateEmployeeCards = employeesArray => {
               </div>
             </div>
           </div>
+        </div>       
         `;
       })
       .join('')}
 
       ${employeesArray
-        .filter(({ role }) => role === 'Engineer')
-        .map(({ name, role, id, email, github }) => {
-          return `
+      .filter(({ role }) => role === 'Engineer')
+      .map(({ name, role, id, email, github }) => {
+        return `
+          <div class='col'>
             <div class='card-container'>
               <div class='card-title-row'>
                 <div class='card-col-title'>
@@ -66,14 +69,16 @@ const generateEmployeeCards = employeesArray => {
                 </div>
               </div>
             </div>
-          `;
-        })
-        .join('')}
+          </div>
+        `;
+      })
+      .join('')}
 
         ${employeesArray
-          .filter(({ role }) => role === 'Intern')
-          .map(({ name, role, id, email, school }) => {
-            return `
+      .filter(({ role }) => role === 'Intern')
+      .map(({ name, role, id, email, school }) => {
+        return `
+          <div class='col'>
               <div class='card-container'>
                 <div class='card-title-row'>
                   <div class='card-col-title'>
@@ -95,10 +100,10 @@ const generateEmployeeCards = employeesArray => {
                   </div>
                 </div>
               </div>
-            `;
-          })
-          .join('')}
-      </div>
+            </div>
+          `;
+      })
+      .join('')}
     </section>
   `;
 }
@@ -124,9 +129,7 @@ module.exports = templateData => {
       <h1>My Team<h1>
     </header>
     <main class="container">
-      <div class='row'>
       ${generateEmployeeCards(templateData)}
-      </div>
     </main>
   </body>
   </html>
