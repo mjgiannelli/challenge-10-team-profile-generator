@@ -10,7 +10,7 @@
 body { min-height: 100vh; }
 
 /* // Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 576px) {
+@media (min-width: 275px) {
     header {
         background-color: #ff4d4d;
         width: 100%;
@@ -75,21 +75,59 @@ body { min-height: 100vh; }
 }
 
 /* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-
+@media (min-width: 576px) {
+    .row {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 
 /* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (min-width: 768px) {
 
+    header {
+        margin-bottom: 5rem;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .row {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+
+    .col {
+        width: 45%;
+    }
 }
 
 /* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-
+@media (min-width: 992px) {
+    .col {
+        width: 40%;
+    }
 }
 
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 
+    .container {
+        width: 100%;
+    }
+
+    .col {
+        width: 30%;
+    }
+
+    .row {
+        justify-content: center;
+    }
+
+    .card-container {
+        margin: 0 1rem;
+  }
 }
