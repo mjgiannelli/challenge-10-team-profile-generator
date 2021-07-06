@@ -32,7 +32,7 @@
 
   ## [Usage](#table-of-contents)
 
-  After installation is complete, run the following code: ‘node inex.js’ in the terminal. Answer the prompts and after completion, your HTML webpage and corresponding CSS page (styling for webpage) will be downloaded in the 'dist' folder. You can copy and paste those files onto your computer and open the html in a browser whenever you please!
+  After installation is complete, run the following code: ‘node index.js’ in the terminal. Answer the prompts and after completion, your HTML webpage and corresponding CSS page (styling for webpage) will be downloaded in the 'dist' folder. You can copy and paste those files onto your computer and open the html in a browser whenever you please!
   
    Screenshot of Example Team
   ![Example Team](src/images/screenshot.png)
