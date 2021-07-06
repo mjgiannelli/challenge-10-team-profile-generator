@@ -28,18 +28,14 @@
 
   [ZIP file download Tutorial](https://drive.google.com/file/d/1Es77aULk006BU_krKsyRvkA5YwO5_yvE/view)
 
-  Screenshot of Example Team
-  ![Example Team](src/images/screenshot.png)
+  [Tutorial on how to use app](https://drive.google.com/file/d/12OmYO3yFavXpJ8TYIvw9rWzXFhX3TsnC/view)
 
   ## [Usage](#table-of-contents)
 
   After installation is complete, run the following code: ‘node inex.js’ in the terminal. Answer the prompts and after completion, your HTML webpage and corresponding CSS page (styling for webpage) will be downloaded in the 'dist' folder. You can copy and paste those files onto your computer and open the html in a browser whenever you please!
   
-  For more information on how to add screenshots for examples, visit the following website:
-  
-  [Mark Down Tutorial](https://agea.github.io/tutorial.md/)
-  
-   
+   Screenshot of Example Team
+  ![Example Team](src/images/screenshot.png)
 
   ## [Contributing](#table-of-contents)
   
